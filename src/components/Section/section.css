@@ -1,0 +1,85 @@
+.header {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.center {
+    background: linear-gradient(rgba(129, 129, 146, 0.651), rgba(5, 5, 92, 0.651));
+    width: auto;
+    min-height: 100hv;
+    border: 1px none black;
+    border-radius: 12px;
+    box-shadow: 3px 4px 12px 3px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    margin: 10px;
+}
+
+@media screen and (min-width: 910px) {
+    .center {
+        margin: 100px 200px;
+    }
+}
+
+
+
+.label {
+    display: flex;
+    flex-direction: row;
+    width: auto;
+}
+
+
+input {
+    width: 400px;
+    border: none;
+    margin: 0;
+    padding: 16px;
+    border-radius: 6px;
+}
+
+
+.list {
+    width: 80%;
+    color: white;
+}
+
+.list>span {
+    color: white;
+}
+
+.add {
+    background-image: url(./assets/Check_green_icon.svg.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-radius: 50% !important;
+    margin-left: 16px;
+    padding: 0 26px;
+    border: none;
+    background-color: rgba(0, 0, 0, 0);
+    color: rgba(0, 0, 0, 0);
+    cursor: pointer;
+}
+
+
+
+.add:hover {
+    box-shadow: 3px 4px 6px;
+    color: rgb(0, 0, 0);
+}
+
+.add:active {
+    opacity: 0.4;
+}
+
+li::marker {
+    color: white;
+    background-color: rgb(0, 0, 0);
+    text-shadow: black 4px 3px 2px;
+}
+
+li {
+    padding: 12px;
+}

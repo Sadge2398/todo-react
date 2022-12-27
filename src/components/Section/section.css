@@ -86,8 +86,8 @@ input {
 
 li::marker {
     color: white;
-    background-color: rgb(0, 0, 0);
-    text-shadow: black 4px 3px 2px;
+    background-color: rgb(255, 255, 255);
+    text-shadow: black 3px 4px 3px;
 }
 
 li {
@@ -116,10 +116,6 @@ li {
     opacity: 0.4;
 }
 
-li::marker {
-    color: black;
-    background-color: rgb(0, 0, 0);
-}
 
 li {
     padding: 12px;

@@ -1,7 +1,7 @@
 import './section.css'
 import { useState } from 'react'
 
-function Section() {
+export default function Section() {
 
 const [todo, setTodo] = useState('')    
 const [todos, setTodos] = useState([])
@@ -15,13 +15,12 @@ const [edit, setEdit] = useState(null)
        const updatedTodos = todos.map((a) =>
         a.id === editTodo.id 
         ? (a = {id: a.id, todo}) 
-        : {id: a.id, todo: a.todo }
+        : {id: a.id, todo: a.todo}
         )
         setTodos(updatedTodos)
         setEdit(null)
         setTodo('')
-        return;
-        
+        return
     }
     
     if(todo === '') {
@@ -42,7 +41,7 @@ const [edit, setEdit] = useState(null)
     }
     
     const handleDelete = (id) => {
-        setTodos(todos.filter((index) => index.id !== id))
+        setTodos(todos.filter((s) => s.id !== id))
         
     }
     return (<>
@@ -52,19 +51,19 @@ const [edit, setEdit] = useState(null)
               <form action="#" id="todo-form" method="get" name="validation"onSubmit={handleSubmit}>
                 <div className="label">
                 
-                   <input id='data'value={todo} onChange={(e)=>setTodo(e.target.value)} type="text" placeholder='Get Shit Done!'/>
+                   <input id='data' value={todo} onChange={(e)=>setTodo(e.target.value)} type="text" placeholder='Get Shit Done!'/>
                 
-                    <button className="" id="btn" type="submit" onClick={onClick}>{edit? "Edit" : "ADD"}</button>
+                    <button className={edit? 'add-edit' : 'add'} id="btn" type="submit" onClick={onClick}></button>
                 </div>
             </form>
             <ol className="list" id="todoList">
                 {
                     todos.map((item) => (
-                        <li key={item.id}>{item.todo}
-                    <button onClick={() => handleDelete(item.id)}>Remove</button>
-                    <button onClick={() => handleEdit(item.id)}>edit</button>
+                    <li key={item.id}>{item.todo}
+                    <button className='remove' onClick={() => handleDelete(item.id)}>Remove</button>
+                    <button className='edit' onClick={() => handleEdit(item.id)}>edit</button>
                     <hr />
-                     </li>
+                    </li>
                     ))
                 }
             </ol>
@@ -72,7 +71,3 @@ const [edit, setEdit] = useState(null)
     </div>
     </>)
 }
-
-export default Section
-
-                    

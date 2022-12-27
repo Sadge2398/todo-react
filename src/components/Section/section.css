@@ -22,8 +22,6 @@
     }
 }
 
-
-
 .label {
     display: flex;
     flex-direction: row;
@@ -38,7 +36,6 @@ input {
     padding: 16px;
     border-radius: 6px;
 }
-
 
 .list {
     width: 80%;
@@ -63,6 +60,19 @@ input {
     cursor: pointer;
 }
 
+.add-edit {
+    background-image: url(./assets/edit.webp);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-radius: 50% !important;
+    margin-left: 16px;
+    padding: 0 26px;
+    border: none;
+    background-color: rgba(0, 0, 0, 0);
+    color: rgba(0, 0, 0, 0);
+    cursor: pointer;
+}
 
 
 .add:hover {
@@ -82,4 +92,68 @@ li::marker {
 
 li {
     padding: 12px;
+}
+.remove {
+    background-image: url(./assets/cross.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-radius: 50% !important;
+    float: right;
+    padding: 10px 0px;
+    border: none;
+    background-color: rgba(0, 0, 0, 0);
+    color: rgba(0, 0, 0, 0);
+    cursor: pointer;
+}
+
+.add:hover {
+    box-shadow: 3px 4px 6px;
+    color: rgb(0, 0, 0);
+}
+
+.add:active {
+    opacity: 0.4;
+}
+
+li::marker {
+    color: black;
+    background-color: rgb(0, 0, 0);
+}
+
+li {
+    padding: 12px;
+}
+
+
+.edit {
+    background-image: url(./assets/edit.webp);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-radius: 50% !important;
+    float: right;
+    padding: 10px 8px;
+    border: none;
+    background-color: rgba(0, 0, 0, 0);
+    color: rgba(0, 0, 0, 0);
+    cursor: pointer;
+}
+
+
+.remove:hover {
+    opacity: .7;
+}
+
+.edit:hover {
+    opacity: .7;
+}
+
+
+#remove:active {
+    opacity: .4;
+}
+
+.edit:active {
+    opacity: .4;
 }
